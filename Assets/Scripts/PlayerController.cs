@@ -51,6 +51,11 @@ public class PlayerController : MonoBehaviour {
 		force += sumForces();
 
 		rb.AddForce (force);
+
+		if (Input.GetKeyDown ("space")) {
+			rb.AddForce(new Vector3(0F, 300F, 0F));
+			Debug.Log("space");
+		}
 	}
 
 }
